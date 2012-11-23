@@ -21,6 +21,15 @@ composer.json fájlba:
 php composer.phar update
 ```
 
+app/AppKernel.php fájlba:
+```
+$bundles = array(
+    // ...
+    new SPE\StringUtilitiesBundle\SPEStringUtilitiesBundle(),
+    // ...
+);
+```
+
 # Használata
 
 controller rétegben:
@@ -34,7 +43,7 @@ class DefaultController extends Controller
 {
     public function listAction(Request $request)
     {
-        $su = $this->get('string-utilites');
+        $su = $this->get('string_utilities');
 
         $password = $su->getRandomString(10, true, true);
 
