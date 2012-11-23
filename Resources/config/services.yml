@@ -1,0 +1,6 @@
+parameters:
+
+services:
+    string_utilities:
+        class: SPE\StringUtilitiesBundle\StringUtilities
+

@@ -1,0 +1,24 @@
+{
+    "name": "spe/string-utilities",
+    "description": "string tipusokkal kapcsolatos fuggvenyek",
+    "homepage": "https://github.com/loonkwil/string-utilities",
+    "type": "symfony-bundle",
+    "repositories":[
+        {
+            "type":"git",
+            "url":"git://github.com/loonkwil/string-utilities.git"
+        }
+    ],
+    "authors": [
+        {
+            "name": "Peter Simon",
+            "email": "simonpepe@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "SPE\\StringUtilitiesBundle": "" }
+    },
+    "target-dir": "SPE/StringUtilitiesBundle"
+}
+
+
