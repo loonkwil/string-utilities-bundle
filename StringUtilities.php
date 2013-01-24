@@ -45,12 +45,6 @@ class StringUtilities
      */
     public function slugify($text)
     {
-        // replace non letter or digits by -
-        $text = preg_replace('#[^\\pL\d]+#u', '-', $text);
-
-        // trim
-        $text = trim($text, '-');
-
         // transliterate
         if( class_exists('Normalizer') /* php5-intl csomaggal jon */) {
             $text = preg_replace('/\p{M}/u', '', \Normalizer::normalize($text, \Normalizer::FORM_D));
@@ -58,6 +52,12 @@ class StringUtilities
         else if( function_exists('iconv') ) {
             $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
         }
+
+        // replace non letter or digits by -
+        $text = preg_replace('#[^\\pL\d]+#u', '-', $text);
+
+        // trim
+        $text = trim($text, '-');
 
         // lowercase
         $text = strtolower($text);
