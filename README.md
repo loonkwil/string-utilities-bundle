@@ -1,5 +1,7 @@
 # String Utilites Bundle
 
+[![Build Status](https://travis-ci.org/loonkwil/string-utilities-bundle.png)](https://travis-ci.org/loonkwil/string-utilities-bundle)
+
 String muveletekkel kapcsolatos fuggveneket tartalmazo Symfony 2.x bundle.
 
 ## Installálás
