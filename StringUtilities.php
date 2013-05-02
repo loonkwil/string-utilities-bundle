@@ -18,12 +18,12 @@ class StringUtilities
      */
     public function getRandomString( $length = 10, $number = false, $uppercase = false )
     {
-        $chars = 'abcdefghijklmnopqrstuvwxyz';
+        $chars = join('', range('a', 'z'));
         if( $uppercase ) {
             $chars .= strtoupper($chars);
         }
         if( $number ) {
-            $chars .= '0123456789';
+            $chars .= join('', range(0, 9));
         }
 
         $str = '';
