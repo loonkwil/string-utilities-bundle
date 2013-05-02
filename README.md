@@ -1,28 +1,31 @@
-# Installálás
+# String Utilites Bundle
+
+String muveletekkel kapcsolatos fuggveneket tartalmazo Symfony 2.x bundle.
+
+## Installálás
 
 composer.json fájlba:
-```
+```json
 "repositories": [
-    ...
     {
         "type": "vcs",
-        "url": "https://github.com/loonkwil/string-utilities.git"
+        "url": "https://github.com/loonkwil/string-utilities-bundle.git"
     },
-    ...
 ],
 "require": {
-    ...
     "spe/string-utilities": "dev-master",
-    ...
 }
 ```
 
-```
+```bash
 php composer.phar update
 ```
 
-app/AppKernel.php fájlba:
-```
+### Symfony 2.x
+
+```php
+// app/AppKernel.php
+
 $bundles = array(
     // ...
     new SPE\StringUtilitiesBundle\SPEStringUtilitiesBundle(),
@@ -30,11 +33,24 @@ $bundles = array(
 );
 ```
 
-# Használata
+### Silex
+
+```php
+
+use SPE\StringUtilitiesBundle\StringUtilities;
+
+$app['su'] = $app->share(
+    return new StringUtilities();
+);
+```
+
+## Használata
+
+### Symfony 2.x
 
 controller rétegben:
 
-```
+```php
 <?php
 
 // ...
@@ -50,4 +66,16 @@ class DefaultController extends Controller
         // ...
     }
 }
+```
+
+### Silex
+
+```php
+<?php
+
+$app['controllers']->get('/list', function() use ($app) {
+    $password = $app['su']->getRandomString(10, true, true);
+
+    // ...
+});
 ```
