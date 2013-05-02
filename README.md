@@ -6,14 +6,16 @@ String muveletekkel kapcsolatos fuggveneket tartalmazo Symfony 2.x bundle.
 
 composer.json fájlba:
 ```json
-"repositories": [
-    {
-        "type": "vcs",
-        "url": "https://github.com/loonkwil/string-utilities-bundle.git"
-    },
-],
-"require": {
-    "spe/string-utilities": "dev-master",
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/loonkwil/string-utilities-bundle.git"
+        },
+    ],
+    "require": {
+        "spe/string-utilities": "dev-master",
+    }
 }
 ```
 
