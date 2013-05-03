@@ -16,7 +16,7 @@ composer.json fájlba:
         },
     ],
     "require": {
-        "spe/string-utilities": "dev-master",
+        "spe/string-utilities-bundle": "dev-master",
     }
 }
 ```

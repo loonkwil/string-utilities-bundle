@@ -1,12 +1,12 @@
 {
-    "name": "spe/string-utilities",
-    "description": "string tipusokkal kapcsolatos fuggvenyek",
-    "homepage": "https://github.com/loonkwil/string-utilities",
+    "name": "spe/string-utilities-bundle",
+    "description": "String muveletekkel kapcsolatos fuggveneket tartalmazo Symfony 2.x bundle",
+    "homepage": "https://github.com/loonkwil/string-utilities-bundle",
     "type": "symfony-bundle",
     "repositories":[
         {
             "type":"git",
-            "url":"git://github.com/loonkwil/string-utilities.git"
+            "url":"git://github.com/loonkwil/string-utilities-bundle.git"
         }
     ],
     "authors": [
@@ -20,5 +20,3 @@
     },
     "target-dir": "SPE/StringUtilitiesBundle"
 }
-
-
